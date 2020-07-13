@@ -1,0 +1,26 @@
+{
+	"format_version": 1,
+	"imports": [{
+		"target_table": "PurchaseOrder.Item",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "item.csv",
+			"has_header": true
+		},
+		"import_settings": {
+			"import_columns": [
+				"PURCHASEORDERID",
+				"PURCHASEORDERITEM",
+				"PRODUCT.PRODUCTID",
+				"NOTEID",
+				"CURRENCY",
+				"GROSSAMOUNT",
+				"NETAMOUNT",
+				"TAXAMOUNT",
+				"QUANTITY",
+				"QUANTITYUNIT"
+		
+			]
+		}
+	}]
+}

@@ -1,0 +1,20 @@
+PARTNERID,PARTNERROLE,EMAILADDRESS,PHONENUMBER,FAXNUMBER,WEBADDRESS,ADDRESSES.ADDRESSID,COMPANYNAME,LEGALFORM,HISTORY.CREATEDBY.EMPLOYEEID,HISTORY.CREATEDAT,HISTORY.CHANGEDBY.EMPLOYEEID,HISTORY.CHANGEDAT,CURRENCY
+100000001,2,dagmar.schulze@beckerberlin.de,3088530,,http://www.beckerberlin.de,1000000001,Becker Berlin,GmbH,33,20121003,33,20121004,EUR
+100000002,1,maria.brown@delbont.com,3023352668,,http://www.delbont.com,1000000002,DelBont Industries,Ltd.,33,20121003,33,20121004,USD
+100000003,1,saskia.sommer@talpa-hannover.de,511403266,,http://www.talpa-hannover.de,1000000003,Talpa,GmbH,33,20121003,33,20121004,EUR
+100000005,1,bart.koenig@tecum-ag.de,2511415,,http://www.tecum-ag.de,1000000005,TECUM,AG,33,20121003,33,20121004,EUR
+100000006,1,yoko.nakamura@asia-ht.com,9078563412,,http://www.asia-ht.com,1000000006,Asia High tech,Inc.,33,20121003,33,20121004,JPY
+100000007,1,sophie.ribery@laurent-paris.com,149744423,,http://www.laurent-paris.com,1000000007,Laurent,S.A.,33,20121003,33,20121004,EUR
+100000008,1,victor.sanchez@avantel.com,7257716,,http://www.avantel.com,1000000008,AVANTEL,S.A.,33,20121003,33,20121004,MXN
+100000009,1,jorge.velez@telecomunicacionesstar.com,1133557799,,http://www.telecomunicacionesstar.com,1000000009,Telecomunicaciones Star,S.A.,33,20121003,33,20121004,ARS
+100000010,2,franklin.jones@pear-computing.com,6789012345,,http://www.pear-computing.com,1000000010,Pear Computing Services,Inc.,33,20121003,33,20121004,USD
+100000011,1,joseph_gschwandtner@alp-systems.at,6623612804,,http://www.alp-systems.at,1000000011,Alpine Systems,AG,33,20121003,33,20121004,EUR
+100000012,1,george_d_grant@newlinedesign.co.uk,2589436180,,http://www.newlinedesign.co.uk,1000000012,New Line Design,Ltd.,33,20121003,33,20121004,GBP
+100000013,1,sarah.schwind@hepa-tec.de,4507867136,,http://www.hepa-tec.de,1000000013,HEPA Tec,GmbH,33,20121003,33,20121004,EUR
+100000014,1,theodor.monathy@anavideon.com,5850428367,,http://www.anavideon.com,1000000014,Anav Ideon,Ltd.,33,20121003,33,20121004,USD
+100000015,1,robert_brown@rb-entertainment.ca,7609448173,,http://www.rb-entertainment.ca,1000000015,Robert Brown Entertainment,Ltd.,33,20121003,33,20121004,CAD
+100000016,1,jorgemontalban@motc.mx,6879342945,,http://www.motc.mx,1000000016,Mexican Oil Trading Company,S.A.,33,20121003,33,20121004,MXN
+100000017,1,johanna.esther@meliva.de,2208791738,,http://www.meliva.de,1000000017,Meliva,AG,33,20121003,33,20121004,EUR
+100000018,1,miguel.luengo@compostela.ar,4440238917,,http://www.compostela.ar,1000000018,Compostela,S.A.,33,20121003,33,20121004,ARS
+100000019,1,isabel.nemours@pateu.fr,6328490087,,http://www.pateu.fr,1000000019,Pateu,S.A.R.L.,33,20121003,33,20121004,EUR
+100000020,2,igor.tarassow@retc.ru,4050378468,,http://www.retc.ru,1000000020,Russian Electronic Trading Company,z.a.o.,333,20121003,33,20121004,RUB

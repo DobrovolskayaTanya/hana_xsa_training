@@ -1,0 +1,26 @@
+{
+	"format_version": 2,
+	"imports": [{
+		"target_table": "MD.Addresses",
+		"source_data": {
+			"data_type": "CSV",
+			"file_name": "addresses.csv",
+			"has_header": true
+		},
+		"import_settings": {
+			"import_columns": [
+				"ADDRESSID",
+				"CITY",
+				"POSTALCODE",
+				"STREET",
+				"BUILDING",
+				"COUNTRY",
+				"REGION",
+				"ADDRESSTYPE",
+				"LATITUDE",
+				"LONGITUDE"
+			]
+		}
+
+	}]
+}

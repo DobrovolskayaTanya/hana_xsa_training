@@ -1,0 +1,3 @@
+service {
+    "PO_INFO" as "PO" key ("PURCHASEORDERID");
+	  }

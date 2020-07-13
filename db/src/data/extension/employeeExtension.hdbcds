@@ -1,0 +1,8 @@
+namespace userExt;
+in package userExt;
+
+using MD.Employees as Employees;
+
+extend entity Employees with {
+EMAILADDRESS   : String(60);
+}

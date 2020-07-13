@@ -1,0 +1,14 @@
+context Core {
+    type BusinessKey : String(10);
+    type SString : hana.VARCHAR(40);
+    type MString : String(60);
+    type LString : String(255);
+    type VLString : String(1024);
+    type SDate : LocalDate;
+    type PhoneT : String(30);
+    type CurrencyT : String(5);
+    type AmountT : Decimal(15, 2);
+    type QuantityT : Decimal(13, 3);
+    type UnitT : String(3);
+    type StatusT : String(1);
+};

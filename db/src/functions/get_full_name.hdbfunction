@@ -1,0 +1,17 @@
+FUNCTION "get_full_name"( 
+	IN im_firstname NVARCHAR(40) ,  
+	IN im_middlename NVARCHAR(40),  
+	IN im_lastname NVARCHAR(40)     
+	)
+RETURNS ex_fullname NVARCHAR(265) 
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   READS SQL DATA AS
+BEGIN
+   
+   if :im_middlename IS NULL
+   THEN    ex_fullname = :im_firstname || ' ' ||:im_lastname ; 
+   ELSE     ex_fullname = :im_firstname || ' ' ||:im_lastname || ' ' || :im_middlename; 
+   END IF;         
+   
+ END

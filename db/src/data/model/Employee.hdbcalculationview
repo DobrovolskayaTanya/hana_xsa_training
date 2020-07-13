@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="Employee" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="Employee"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="MD.Employees">
+    <resourceUri>MD.Employees</resourceUri>
+  </DataSource>
+  <DataSource id="MD.Addresses">
+    <resourceUri>MD.Addresses</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Employees">
+    <viewAttributes>
+      <viewAttribute id="EMPLOYEEID"/>
+      <viewAttribute id="NAME_FIRST"/>
+      <viewAttribute id="NAME_MIDDLE"/>
+      <viewAttribute id="NAME_LAST"/>
+      <viewAttribute id="NAME_INITIALS"/>
+      <viewAttribute id="SEX"/>
+      <viewAttribute id="PHONENUMBER"/>
+      <viewAttribute id="LOGINNAME"/>
+      <viewAttribute id="ADDRESSES_ADDRESSID"/>
+      <viewAttribute id="CURRENCY"/>
+      <viewAttribute id="SALARYAMOUNT"/>
+      <viewAttribute id="ACCOUNTNUMBER"/>
+      <viewAttribute id="BANKID"/>
+      <viewAttribute id="BANKNAME"/>
+      <viewAttribute id="EMPLOYEEPICURL"/>
+      <viewAttribute id="EMAILADDRESS"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="MD.Employees">
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_FIRST" source="NAME.FIRST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_MIDDLE" source="NAME.MIDDLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_LAST" source="NAME.LAST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_INITIALS" source="NAME.INITIALS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESSES_ADDRESSID" source="ADDRESSES.ADDRESSID"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Addresses">
+    <viewAttributes>
+      <viewAttribute id="ADDRESSID"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="POSTALCODE"/>
+      <viewAttribute id="STREET"/>
+      <viewAttribute id="BUILDING"/>
+      <viewAttribute id="COUNTRY"/>
+      <viewAttribute id="REGION"/>
+      <viewAttribute id="ADDRESSTYPE"/>
+      <viewAttribute id="LATITUDE"/>
+      <viewAttribute id="LONGITUDE"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="MD.Addresses"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Empployees_Addr" cardinality="CN_N" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="EMPLOYEEID"/>
+      <viewAttribute id="NAME_FIRST"/>
+      <viewAttribute id="NAME_MIDDLE"/>
+      <viewAttribute id="NAME_LAST"/>
+      <viewAttribute id="ADDRESSES_ADDRESSID"/>
+      <viewAttribute id="EMAILADDRESS"/>
+      <viewAttribute id="CITY"/>
+      <viewAttribute id="REGION"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Employees">
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMPLOYEEID" source="EMPLOYEEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_FIRST" source="NAME_FIRST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_MIDDLE" source="NAME_MIDDLE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAME_LAST" source="NAME_LAST"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESSES_ADDRESSID" source="ADDRESSES_ADDRESSID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="EMAILADDRESS" source="EMAILADDRESS"/>
+    </input>
+    <input node="Addresses">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITY" source="CITY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="ADDRESSES_ADDRESSID" source="ADDRESSID"/>
+    </input>
+    <joinAttribute name="ADDRESSES_ADDRESSID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Empployees_Addr">
+  <attributes>
+    <attribute id="EMPLOYEEID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMPLOYEEID"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="EMPLOYEEID"/>
+    </attribute>
+    <attribute id="NAME_FIRST" hidden="true" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME_FIRST"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="NAME_FIRST"/>
+    </attribute>
+    <attribute id="NAME_MIDDLE" hidden="true" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME_MIDDLE"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="NAME_MIDDLE"/>
+    </attribute>
+    <attribute id="NAME_LAST" hidden="true" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAME_LAST"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="NAME_LAST"/>
+    </attribute>
+    <attribute id="ADDRESSES_ADDRESSID" hidden="true" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ADDRESSES_ADDRESSID"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="ADDRESSES_ADDRESSID"/>
+    </attribute>
+    <attribute id="EMAILADDRESS" hidden="true" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="EMAILADDRESS"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="EMAILADDRESS"/>
+    </attribute>
+    <attribute id="CITY" hidden="true" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITY_OF_ORDER"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="CITY"/>
+    </attribute>
+    <attribute id="REGION" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGION_OF_ORDER"/>
+      <keyMapping columnObjectName="Empployees_Addr" columnName="REGION"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes>
+    <calculatedAttribute id="Responsible_employee" order="8" displayAttribute="false" attributeHierarchyActive="false" semanticType="empty">
+      <descriptions defaultDescription="Responsible employee"/>
+      <keyCalculation datatype="VARCHAR" expressionLanguage="SQL" length="60">
+        <formula>CONCAT( &quot;NAME_FIRST&quot;,&quot;NAME_LAST&quot;)</formula>
+      </keyCalculation>
+    </calculatedAttribute>
+  </calculatedAttributes>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup" expanded="true">
+      <upperLeftCorner x="221" y="112"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+  
+    <shape modelObjectName="Employees" modelObjectNameSpace="CalculationView" expanded="true">
+      <upperLeftCorner x="92" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Addresses" modelObjectNameSpace="CalculationView" expanded="true">
+      <upperLeftCorner x="302" y="376"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Empployees_Addr" modelObjectNameSpace="CalculationView" expanded="true">
+      <upperLeftCorner x="221" y="217"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Employees" modelObjectNameSpace="Empployees_Addr" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="224"/>
+    </shape>
+    <shape modelObjectName="Addresses" modelObjectNameSpace="Empployees_Addr" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="167"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

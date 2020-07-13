@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="PO_INFO" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="PO_INFO"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="get_po_info_for_cv" type="TABLE_FUNCTION">
+    <resourceUri>get_po_info_for_cv</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="get_po_info_for_cv">
+  <attributes>
+    <attribute id="PO_ID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PO_ID"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="PO_ID"/>
+    </attribute>
+    <attribute id="RESPONS_EMPLOYEE" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="RESPONS_EMPLOYEE"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="RESPONS_EMPLOYEE"/>
+    </attribute>
+    <attribute id="PRODUCT_ID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCT_ID"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="PRODUCT_ID"/>
+    </attribute>
+    <attribute id="ORDERING_STATUS" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ORDERING_STATUS"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="ORDERING_STATUS"/>
+    </attribute>
+    <attribute id="REGION_OF_ORDERING" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="REGION_OF_ORDERING"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="REGION_OF_ORDERING"/>
+    </attribute>
+    <attribute id="COUNTRY_OF_ORIGIN" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY_OF_ORIGIN"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="COUNTRY_OF_ORIGIN"/>
+    </attribute>
+    <attribute id="CATEGORY" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CATEGORY"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="CATEGORY"/>
+    </attribute>
+    <attribute id="PO_ITEM_ID" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PO_ITEM_ID"/>
+      <keyMapping columnObjectName="get_po_info_for_cv" columnName="PO_ITEM_ID"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="DISCOUNT" order="7" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="DISCOUNT"/>
+      <measureMapping columnObjectName="get_po_info_for_cv" columnName="DISCOUNT"/>
+    </measure>
+    <measure id="GROSSAMOUNT" order="9" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="GROSSAMOUNT"/>
+      <measureMapping columnObjectName="get_po_info_for_cv" columnName="GROSSAMOUNT"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape modelObjectName="Output" modelObjectNameSpace="MeasureGroup" expanded="true">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
