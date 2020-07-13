@@ -12,7 +12,7 @@
 <!-- 2.) Create a UI5 button and place it onto the page -->
 <script>
     var oModel = new sap.ui.model.odata.v2.ODataModel("/xsodata/poView.xsodata", true);
-	var oTable = new sap.ui.table.Table({ title: "My first table" });
+	var oTable = new sap.ui.table.Table({ title: "CV with Star join" });
 	oTable.addColumn(new sap.ui.table.Column({ label: "PO ID", template: "PURCHASEORDERID" }));
 	oTable.addColumn(new sap.ui.table.Column({ label: "PO Items", template: "PURCHASEORDERITEM" }));
 	oTable.addColumn(new sap.ui.table.Column({ label: "Amount", template: "GROSSAMOUNT" }));
