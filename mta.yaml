@@ -17,6 +17,7 @@ modules:
           name: js-backend
           url: '~{url}'
           forwardAuthToken: true
+        group: destinations
   - name: js
     type: nodejs
     path: js
